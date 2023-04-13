@@ -1,9 +1,41 @@
 proxies:    
-  - name: HRZ | FastSSH # 03
+  - name: OVH | GS
+    server: vmess-ovh-sg01.globalssh.xyz
+    port: 443
+    type: vmess
+    uuid: 9bc724fb-377b-4d65-b7de-ec89807b47b8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: gz0.googleusercontent.com
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: gz0.googleusercontent.com
+    udp: true
+  - name: CTB | GS
+    server: vmess-ctb-sg01.globalssh.xyz
+    port: 443
+    type: vmess
+    uuid: 94818258-3501-4e91-9e97-5afd2602297e
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: gz0.googleusercontent.com
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: gz0.googleusercontent.com
+    udp: true
+  - name: HRZ | FS
     server: id-1.0rd.net
     port: 443
     type: vmess
-    uuid: 04831360-d0f8-11ed-b735-205c6d5f5d78
+    uuid: dce69c20-da50-11ed-b236-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
@@ -16,7 +48,7 @@ proxies:
         Host: gz0.googleusercontent.com
     udp: true
   # exp 07
-  - name: MLB | FastSSH # MELBI 2
+  - name: MLB | FS # MELBI 2
     server: sg-8.0rd.net
     port: 443
     type: vmess
