@@ -1,9 +1,17 @@
 proxies:
-  - name: SG HE
-    server: sg3-trojan.bonds.id
+  - name: OVH | HWD
+    server: sg-3.test3.net
     port: 443
     type: trojan
-    password: 6d4cfe00-d034-11ed-8322-1239d0255272
+    password: 275ec150-da51-11ed-893a-1239d0255272
+    skip-cert-verify: true
+    sni: gz0.googleusercontent.com
+    udp: true
+  - name: HE | HWD
+    server: sg1-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 1fc74b10-da51-11ed-b39c-1239d0255272
     skip-cert-verify: true
     sni: gz0.googleusercontent.com
     udp: true
