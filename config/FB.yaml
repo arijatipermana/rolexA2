@@ -1,1 +1,34 @@
-
+proxies:    
+  - name: HRZ | FastSSH # 03
+    server: id-1.0rd.net
+    port: 443
+    type: vmess
+    uuid: 04831360-d0f8-11ed-b735-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: gz0.googleusercontent.com
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: gz0.googleusercontent.com
+    udp: true
+  # exp 07
+  - name: MLB | FastSSH # MELBI 2
+    server: sg-8.0rd.net
+    port: 443
+    type: vmess
+    uuid: 97ed0730-d60e-11ed-b835-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: gz0.googleusercontent.com
+    network: ws
+    ws-opts: 
+      path: /fastssh
+      headers: 
+        Host: gz0.googleusercontent.com
+    udp: true
