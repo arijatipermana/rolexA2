@@ -29,7 +29,7 @@ proxy-providers:
     type: http
     url: "https://raw.githubusercontent.com/arijatipermana/rolexA2/main/config/MN.yaml"
     interval: 3600
-    path: /data/adb/clash/rolexA2/MN.yaml
+    path: /data/adb/clash/switch/config0/MN.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -38,7 +38,7 @@ proxy-providers:
     type: http
     url: "https://raw.githubusercontent.com/arijatipermana/rolexA2/main/config/FB.yaml"
     interval: 3600
-    path: /data/adb/clash/rolexA2/FB.yaml
+    path: /data/adb/clash/switch/config0/FB.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -47,7 +47,7 @@ proxy-providers:
     type: http
     url: "https://raw.githubusercontent.com/arijatipermana/rolexA2/main/config/ID.yaml"
     interval: 3600
-    path: /data/adb/clash/rolexA2/ID.yaml
+    path: /data/adb/clash/switch/config0/ID.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
