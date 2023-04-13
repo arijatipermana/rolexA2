@@ -1,5 +1,5 @@
 proxies:    
-  - name: IKD
+  - name: IKD | GS
     server: vmess-ikd-id01.globalssh.xyz
     port: 443
     type: vmess
