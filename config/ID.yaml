@@ -1,1 +1,17 @@
-
+proxies:    
+  - name: IKD | GS
+    server: vmess-ikd-id01.globalssh.xyz
+    port: 443
+    type: vmess
+    uuid: e1f3f62a-af0b-47b3-9c64-af8820462d83
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: gz0.googleusercontent.com
+    network: ws
+    ws-opts:
+      path: /vmess-ws
+      headers:
+        Host: gz0.googleusercontent.com
+    udp: true
