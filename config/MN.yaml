@@ -1,1 +1,10 @@
-
+proxies:
+  - name: SG HE
+    server: sg3-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 6d4cfe00-d034-11ed-8322-1239d0255272
+    skip-cert-verify: true
+    sni: gz0.googleusercontent.com
+    udp: true
+  
