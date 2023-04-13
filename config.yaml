@@ -1,1 +1,60 @@
-
+proxies:
+proxy-groups:
+  - name: Servers
+    type: select
+    proxies:
+      - MN Server
+      - FB Server
+      - ID Server
+  - name: MN Server
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - "1. MN"
+  - name: FB Server
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - "2. FB"
+  - name: ID Server
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - "3. ID"
+proxy-providers:
+  "1. MN":
+    type: file
+    path: /data/adb/clash/switch/config0/MN.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  "2. FB":
+    type: file
+    path: /data/adb/clash/switch/config0/FB.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  "3. ID":
+    type: file
+    path: /data/adb/clash/switch/config0/ID.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+rule-providers:
+  Rule_ID:
+    type: http
+    behavior: classical
+    path: /data/adb/clash/switch/config0/Rule_ID.yaml
+    url: "https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_indo.yaml"
+    interval: 86400
+rules:
+  - RULE-SET,Rule_ID,ID Server
+  - IP-CIDR,127.0.0.1/32,REJECT,no-resolve
+  - IP-CIDR6,::1/128,REJECT,no-resolve
+  - MATCH,Servers
